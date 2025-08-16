@@ -1,2 +1,10 @@
 server:
   port: 9090
+
+spring:
+  cloud:
+    gcp:
+    spanner:
+    project-id: isentropic-road-453704-e4
+    instance-id: spannertest
+    database: spannertest
