@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: indian-railway
-        image: asia-southeast1-docker.pkg.dev/PROJECT_ID/springboot-repo/indian-railway
+        image: asia-southeast1-docker.pkg.dev/isentropic-road-453704-e4/springboot-repo/indian-railway:latest
         ports:
         - containerPort: 8080
 ---
