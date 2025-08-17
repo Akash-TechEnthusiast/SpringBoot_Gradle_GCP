@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: indian-railway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: indian-railway
+  template:
+    metadata:
+      labels:
+        app: indian-railway
+    spec:
+      containers:
+      - name: indian-railway
+        image: asia-southeast1-docker.pkg.dev/PROJECT_ID/springboot-repo/indian-railway
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: indian-railway-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: indian-railway
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
