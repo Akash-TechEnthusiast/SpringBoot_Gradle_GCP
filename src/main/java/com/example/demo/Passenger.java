@@ -13,5 +13,16 @@ public class Passenger {
     private String name;
     private Long age;
 
+    public Passenger() {}  // default constructor
+
+public String getPassengerId() { return passengerId; }
+public void setPassengerId(String passengerId) { this.passengerId = passengerId; }
+
+    public String getName() { return name; }
+public void setName(String name) { this.name = name; }
+
+    public Long getAge() { return age; }
+public void setAge(Long age) { this.age = age; }
+
     // getters, setters
 }
