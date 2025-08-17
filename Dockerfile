@@ -14,7 +14,8 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy JAR from the build stage
-COPY --from=build /app/build/libs/*.jar app.jar
+
+COPY --from=build /app/build/libs/app.jar app.jar
 
 # Run the app
 ENTRYPOINT ["java","-jar","/app/app.jar"]
